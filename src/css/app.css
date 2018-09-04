@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+  padding: 0px 20px;
+  margin-top: 70px; }
+
+body {
+  font-family: "Roboto",sans-serif;
+  text-rendering: inherit;
+  text-rendering: initial;
+  text-rendering: unset; }
+
+button {
+  cursor: pointer; }
+
+button.female-btn {
+  min-width: 200px;
+  background: transparent;
+  color: pink;
+  border: none;
+  outline: none;
+  padding: 12px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  margin: 50px 0px;
+  text-decoration: underline; }
+
+button.female-btn:hover {
+  background: #ff8da1;
+  color: #fff;
+  text-decoration: none; }
+
+button.male-btn {
+  min-width: 200px;
+  background: transparent;
+  color: #84C6FF;
+  border: none;
+  outline: none;
+  padding: 12px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  margin: 50px 0px;
+  text-decoration: underline; }
+
+button.male-btn:hover {
+  background: #5bb3ff;
+  color: #fff;
+  text-decoration: none; }
+
+.dogComponent {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  padding-bottom: 55px;
+  border-radius: 5px;
+  margin-top: 300px; }
+
+@media (max-width: 650px) {
+  .dogComponent {
+    max-width: inherit;
+    width: 100%; } }
+
+.dogComponent.male {
+  background: #84C6FF;
+  box-shadow: 0px 0px 20px #84C6FF; }
+
+.dogComponent.male .dc-image {
+  position: relative;
+  width: 600px;
+  margin: 0px auto;
+  margin-top: -276px;
+  pointer-events: none;
+  left: -39px; }
+
+.dogComponent.male .dc-image img {
+  width: 100%; }
+
+.dogComponent.male .randomize-btn {
+  background: #84C6FF;
+  border: none;
+  box-shadow: 2px 10px 30px 8px #5bb3ff;
+  color: #fff;
+  padding: 20px 100px;
+  border-radius: 90px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: 0.5s all;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24); }
+
+.dogComponent.male .randomize-btn:hover {
+  box-shadow: 2px 18px 40px 8px #5bb3ff;
+  transform: translateY(-5px); }
+
+.dogComponent.male #display_dog_name {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-shadow: 0px 6px 35px #5bb3ff;
+  margin-top: -25px; }
+
+@media (max-width: 650px) {
+  .dogComponent.male #display_dog_name {
+    font-size: 50px; } }
+
+.dogComponent.female {
+  background: pink;
+  box-shadow: 0px 0px 20px pink; }
+
+.dogComponent.female .dc-image {
+  position: relative;
+  width: 600px;
+  margin: 0px auto;
+  margin-top: -276px;
+  pointer-events: none;
+  left: -39px; }
+
+.dogComponent.female .dc-image img {
+  width: 100%; }
+
+.dogComponent.female .randomize-btn {
+  background: pink;
+  border: none;
+  box-shadow: 2px 10px 30px 8px #ff8da1;
+  color: #fff;
+  padding: 20px 100px;
+  border-radius: 90px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: 0.5s all;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24); }
+
+.dogComponent.female .randomize-btn:hover {
+  box-shadow: 2px 18px 40px 8px #ff8da1;
+  transform: translateY(-5px); }
+
+.dogComponent.female #display_dog_name {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-shadow: 0px 6px 35px #ff8da1;
+  margin-top: -25px; }
+
+@media (max-width: 650px) {
+  .dogComponent.male .dc-image, .dogComponent.female .dc-image {
+    width: 100%;
+    left: inherit; } }
+
+@media (max-width: 520px) {
+  .dogComponent.male .dc-image, .dogComponent.female .dc-image {
+    width: 100%;
+    left: inherit;
+    margin-top: -150px; } }
+
+@media (max-width: 520px) {
+  .dogComponent.male .randomize-btn, .dogComponent.female .randomize-btn {
+    padding: 14px 60px; } }
+
+@media (max-width: 650px) {
+  .dogComponent.male #display_dog_name, .dogComponent.female #display_dog_name {
+    font-size: 50px; } }

@@ -1,0 +1,206 @@
+$female_color:pink;
+$female_color_darken:darken($female_color, 10%);
+$male_color:#84C6FF;
+$male_color_darken:darken($male_color, 8%);
+$font-family:'Roboto', sans-serif;
+
+
+.App {
+    text-align:center;
+    padding: 0px 20px;
+    margin-top:70px;
+}
+
+body {
+    font-family: $font-family;
+    /* Global values */
+    text-rendering: inherit;
+    text-rendering: initial;
+    text-rendering: unset;
+}
+
+
+button{
+    cursor:pointer;
+    &.female-btn {
+        min-width:200px;
+        background:transparent;
+        color:  $female_color;
+        border: none;
+        outline: none;
+        padding: 12px 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 100px;
+        margin: 50px 0px;
+        text-decoration: underline;
+            &:hover {
+                background: $female_color_darken;
+                color:#fff;
+                text-decoration:none;
+            }
+    }
+    &.male-btn {
+        min-width:200px;
+        background:transparent;
+        color:  $male_color;
+        border: none;
+        outline: none;
+        padding: 12px 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 100px;
+        margin: 50px 0px;
+        text-decoration: underline;
+            &:hover {
+                background: $male_color_darken;
+                color:#fff;
+                text-decoration:none;
+            }
+    }
+}
+
+
+.dogComponent {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    height:auto;
+    max-width:480px;
+    padding-bottom: 55px;
+    border-radius:5px;
+    margin-top:300px;
+        @media (max-width : 650px) {
+            max-width:inherit;
+            width:100%;
+        }
+        &.male {
+            background:$male_color;
+            box-shadow: 0px 0px 20px $male_color;
+                .dc-image {
+                    position: relative;
+                    width: 600px;
+                    margin: 0px auto;
+                    margin-top: -276px;
+                    //border: 1px solid red;
+                    pointer-events: none;
+                    left: -39px;
+                        img {
+                            width:100%;
+                        }
+
+                }
+
+                .randomize-btn {
+                    background:$male_color;
+                    border:none;
+                    box-shadow:2px 10px 30px 8px $male_color_darken;
+                    color:#fff;
+                    padding:20px 100px;
+                    border-radius:90px;
+                    font-size:20px;
+                    text-transform:uppercase;   
+                    cursor:pointer;
+                    font-weight:700;
+                    letter-spacing:.5px;   
+                    transition: 0.5s all;
+                    outline:none;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+                        &:hover {
+                            box-shadow: 2px 18px 40px 8px $male_color_darken;
+                            transform:translateY(-5px);
+                        }
+                }
+
+                #display_dog_name {
+                    color:#fff;
+                    font-size:100px;
+                    font-weight:900;
+                    margin-bottom:30px;
+                    text-shadow: 0px 6px 35px $male_color_darken;
+ 
+     margin-top: -25px;                   @media (max-width : 650px) {
+                            font-size:50px;
+                        }
+                }
+        }
+        &.female {
+            background:$female_color;
+            box-shadow: 0px 0px 20px $female_color;
+                .dc-image {
+                    position: relative;
+                    width: 600px;
+                    margin: 0px auto;
+                    margin-top: -276px;
+                    //border: 1px solid red;
+                    pointer-events: none;
+                    left: -39px;
+                        img {
+                            width:100%;
+                        }
+
+                }
+
+                .randomize-btn {
+                    background:$female_color;
+                    border:none;
+                    box-shadow:2px 10px 30px 8px $female_color_darken;
+                    color:#fff;
+                    padding:20px 100px;
+                    border-radius:90px;
+                    font-size:20px;
+                    text-transform:uppercase;   
+                    cursor:pointer;
+                    font-weight:700;
+                    letter-spacing:.5px;   
+                    transition: 0.5s all;
+                    outline:none;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+                        &:hover {
+                            box-shadow: 2px 18px 40px 8px $female_color_darken;
+                            transform:translateY(-5px);
+                        }
+
+                }
+
+                #display_dog_name {
+                    color:#fff;
+                    font-size:100px;
+                    font-weight:900;
+                    margin-bottom:30px;
+                    text-shadow: 0px 6px 35px $female_color_darken;
+                        margin-top: -25px;
+                }
+
+        }
+
+        //RWD
+        &.male,
+        &.female {
+            .dc-image {
+                @media (max-width : 650px) {
+                    width:100%;
+                    left:inherit;
+                }
+                @media (max-width : 520px) {
+                    width:100%;
+                    left:inherit;
+                    margin-top: -150px;
+                }
+            }
+            .randomize-btn {
+                @media (max-width : 520px) {
+                    padding: 14px 60px;
+                }
+            }
+            #display_dog_name {
+                @media (max-width : 650px) {
+                    font-size:50px;
+                }
+            }
+        }
+
+}
+
