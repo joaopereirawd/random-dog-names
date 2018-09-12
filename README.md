@@ -1,4 +1,4 @@
-# random-dog-names
+# react-random-dog-names
 
 Generate the perfect name for your dog! 
 
